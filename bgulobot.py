@@ -115,22 +115,22 @@ def button_click(update: Update, context: CallbackContext) -> None:
             [InlineKeyboardButton("Информация для регистрации", callback_data='registration_ru')]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
-        query.edit_message_text(text="Информация для потсупающих:", reply_markup=reply_markup)
+        query.edit_message_text(text="Информация для поступающих:", reply_markup=reply_markup)
     elif query.data == 'training_ru':
         keyboard = [
-            [InlineKeyboardButton("Preparatory department", callback_data='preparatory_ru')],
-            [InlineKeyboardButton("Bachelor degree", callback_data='bachelor_ru')],
-            [InlineKeyboardButton("Master degree", callback_data='master_ru')],
-            [InlineKeyboardButton("Postgraduate", callback_data='postgraduate_ru')]
+            [InlineKeyboardButton("Подготовительное отделение", callback_data='preparatory_ru')],
+            [InlineKeyboardButton("Бакалавриат", callback_data='bachelor_ru')],
+            [InlineKeyboardButton("Магистратура", callback_data='master_ru')],
+            [InlineKeyboardButton("Аспирантура", callback_data='postgraduate_ru')]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         query.edit_message_text(text="Выберите ступень для подготовки:", reply_markup=reply_markup)
     elif query.data == 'programme_ru':
         keyboard = [
-            [InlineKeyboardButton("Preparatory department", callback_data='pp_ru')],
-            [InlineKeyboardButton("Bachelor degree", callback_data='pb_ru')],
-            [InlineKeyboardButton("Master degree", callback_data='pm_ru')],
-            [InlineKeyboardButton("Postgraduate", callback_data='ppt_ru')]
+            [InlineKeyboardButton("Подготовительное отделение", callback_data='pp_ru')],
+            [InlineKeyboardButton("Бакалавриат", callback_data='pb_ru')],
+            [InlineKeyboardButton("Магистратура", callback_data='pm_ru')],
+            [InlineKeyboardButton("Аспирантура", callback_data='ppt_ru')]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         query.edit_message_text(text="Выберите программу обучения:", reply_markup=reply_markup)
@@ -138,7 +138,7 @@ def button_click(update: Update, context: CallbackContext) -> None:
         keyboard = [
             [InlineKeyboardButton("Бакалавриат", callback_data='lb_ru')],
             [InlineKeyboardButton("Магистратура", callback_data='lm_ru')],
-            [InlineKeyboardButton("Postgraduate", callback_data='lp_ru')]
+            [InlineKeyboardButton("Аспирантура", callback_data='lp_ru')]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         query.edit_message_text(text="Выберите своё образование:", reply_markup=reply_markup)
@@ -146,15 +146,15 @@ def button_click(update: Update, context: CallbackContext) -> None:
         query.edit_message_text(text="Тут должны быть детали оплаты....")
     elif query.data == 'faculties_ru':
         keyboard = [
-            [InlineKeyboardButton("Cultural Studies and Sociocultural Activities", callback_data='fkiskd_ru')],
-            [InlineKeyboardButton("Information and Document Communications", callback_data='fidk_ru')],
-            [InlineKeyboardButton("Art Culture", callback_data='fhk_ru')],
-            [InlineKeyboardButton("Music and Choreographic Art", callback_data='fmhi_ru')]
+            [InlineKeyboardButton("Факультет культурологии и социально-культурной деятельности", callback_data='fkiskd_ru')],
+            [InlineKeyboardButton("Факультет информационно-документных коммуникаций", callback_data='fidk_ru')],
+            [InlineKeyboardButton("Факультет художественной культуры", callback_data='fhk_ru')],
+            [InlineKeyboardButton("Факультет музыкального и хореографического искусства", callback_data='fmhi_ru')]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         query.edit_message_text(text="Выберите факультет:", reply_markup=reply_markup)
     elif query.data == 'accommodation_ru':
-        query.edit_message_text(text="- There are two student hostels located nearby academic buildings \n - Foreign students usually live in double rooms \n - Student hostels are equipped with all necessary furniture to live in comfort. There are large common rooms and study halls as well as laundries, kitchens and gyms \n - Hobby clubs function on a regular basis. A lot of cultural events and concerts are held in the Student Residential Complex")
+        query.edit_message_text(text="- Рядом расположены два студенческих общежития \n - Иностранные студенты обычно живут в двухместных номерах \n - Студенческие общежития оснащены всей необходимой мебелью, чтобы жить в комфорте.Есть большие общие комнаты и учебные залы, а также прачечные, кухни и спортивные залы \n - Хобби -клубы функционируют на регулярной основе.Много культурных мероприятий и концертов проводится в студенческом жилом комплексе")
 
 
 
@@ -234,7 +234,7 @@ def programm_button_click(update: Update, context: CallbackContext) -> None:
     elif query.data == 'pb_ru':
         query.edit_message_text(text="Музыкальное народное инструментальное искусство \nЭстрадное музыкальное искусство Хореографическое искусство \nНародное певческое искусство \nХоровое искусство \nКомпьютерная музыка \nБиблиотечно-информационная деятельность \nМузееведение и охрана исторического и культурного наследия \nКультурология \nСоциально-культурный менеджмент и коммуникации \nСоциально-культурная деятельность \nИстория искусств \nПрикладное искусство \nПостановка спектаклей и праздников \nТеатральная режиссура")
     elif query.data == 'pm_ru':
-        query.edit_message_text(text="История искусств \nКультурология \nХудожественный менеджмент \nСоциокультурные исследования \nБиблиотечно-информационные исследования \nNМузееведение и охрана исторического и культурного наследия")
+        query.edit_message_text(text="История искусств \nКультурология \nХудожественный менеджмент \nСоциокультурные исследования \nБиблиотечно-информационные исследования \nМузееведение и охрана исторического и культурного наследия")
     elif query.data == 'ppt_ru':
         query.edit_message_text(text="Тут пока ничего нет...А должно?")
             
@@ -259,13 +259,13 @@ def admission_button_click(update: Update, context: CallbackContext) -> None:
 ################### РУССКИЙ ЯЗЫК ##########################
 
     elif query.data == 'cost_ru':
-        query.edit_message_text(text= "To study in the Republic of Belarus, you need a student visa.\n It's necessary to obtain an invitation letter before the arrival and get a student visa at the nearest diplomatic mission of the Republic of Belarus. \n NOTE! Make sure that you inform the Department for International Cooperation about the time of your arrival in Belarus as well as the necessity of providing you with accommodation in the student residence beforehand.\n • Medical insurance — 200 USD;\n • Medical examination — 75 USD;\n • Registration of an exit visa — 25 USD;\n • Registration of temporary stay — 15 USD;\n • Registration of temporary residence (for 1 year) — 40 USD;\n • Translation of documents (if necessary) — from 50 USD;\n • Accommodation in the student residence — 50 USD (per month).\nAll foreign citizens arriving to study at the University should contact the Department for International Cooperation (room 316, +375 17 3758350,) within three days after crossing the border of the Republic of Belarus." )  
+        query.edit_message_text(text= "Чтобы учиться в Республике Беларусь, вам нужна студенческая виза.\n Необходимо получить пригласительное письмо до прибытия и получить студенческую визу на ближайшей дипломатической миссии Республики Беларусь. \n ПРИМЕЧАНИЕ! Убедитесь, что вы сообщите Департаменту о международном сотрудничестве о времени вашего прибытия в Беларусь, а также о необходимости предоставления вам жилья в студенческой резиденции.\n • Медицинское страхование - 200 долларов США;\n • Медицинское обследование - 75 долларов США;\n • Регистрация выхода визы - 25 долларов США;\n • Регистрация временного пребывания - 15 долларов США;\n • Регистрация временного места жительства (на 1 год) - 40 долларов США;\n • Перевод документов (при необходимости) - от 50 долларов США;\n • Размещение в студенческой резиденции - 50 долларов США (в месяц).\nВсе иностранные граждане, прибывающие для обучения в университете, должны связаться с департаментом международного сотрудничества (комната 316, +375 17 3758350) в течение трех дней после пересечения границы Республики Беларусь." )  
     elif query.data == 'apply_ru':
-        query.edit_message_text(text="After arriving in Belarus, you should contact the Department for International Cooperation of Belarusian State University of Culture and Arts (room 302, +375 17 3752000, +375 29 7546224, WeChat, Viber, WhatsApp, Telegram) and provide the package of documents specified in your invitation letter. Make sure that all the documents are translated into Russian or Belarusian and certified by a notary. After that, the specialists of the Department will inform you about an interview with university professors. The interview can be conducted in English or Russian (depending on the chosen language of study). Admission interviews are conducted to assess the skills required in educational process and depend on the chosen programme.")
+        query.edit_message_text(text="После прибытия в Беларусь вы должны связаться с департаментом международного сотрудничества Беларусского государственного университета культуры и искусств (кабинет 302, +375 17 3752000, +375 29 7546224, WeChat, Viber, WhatsApp, Telegram) и предоставление пакета документов, указанных в вашем приглашении. Убедитесь, что все документы переведены на русский или белорусский язык и сертифицированны нотариусом. После этого специалисты департамента сообщут вам о интервью с профессорами университетов.Интервью может проводиться на английском или русском языке (в зависимости от выбранного языка обучения).Приемные интервью проводятся для оценки навыков, необходимых в образовательном процессе, и зависят от выбранной программы.")
     elif query.data == 'admissiondocs_ru':
-        query.edit_message_text(text="Bachelor degree: \n - the original of the diploma of secondary education with the application, issued in the Republic of Belarus, or a document on education issued in a foreign state, which indicates the studied disciplines and their volume, marks (points) received on them; \n - the conclusion of the medical consulting commission issued by the territorial health organization of the Republic of Belarus;\n - a medical report on the state of health and a certificate of absence of HIV infection, issued by the official health authority of the country from which the candidate came from;\n - duly certified copy of the birth certificate;\n - duly certified copy of the passport;\n - 4 photos 3x4 cm;\n - 2 photos 2x3 cm.\n All documents should have a notarized translation into one of the state languages of the Republic of Belarus (Belarusian or Russian). \n\nMaster degree:\n- the original of the diploma of higher education with the application, issued in the Republic of Belarus, or a document on education issued in a foreign state, which indicates the studied disciplines and their volume, marks (points) received on them;\n - the conclusion of the medical consulting commission issued by the territorial health organization of the Republic of Belarus;\n - a medical report on the state of health and a certificate of absence of HIV infection, issued by the official health authority of the country from which the candidate came from;\n - duly certified copy of the birth certificate\n - 4 photos 3x4 cm;\n - 2 photos 2x3 cm.\n All documents should have a notarized translation into one of the state languages of the Republic of Belarus (Belarusian or Russian)")
+        query.edit_message_text(text="Cтепень бакалавра: \n - Оригинал диплома среднего образования с заявлением, выпущенным в Республике Беларусь, или документ по образованию, выпущенному в иностранном государстве, который указывает на изученные дисциплины и их объем, отметки (очки), полученные за них; \n - заключение Комиссии по медицинской консалтингу, выпущенной территориальной организацией здравоохранения Республики Беларусь;\n - Медицинский отчет о состоянии здоровья и свидетельство о отсутствии ВИЧ -инфекции, выпущенное официальным управлением здравоохранения страны, из которого кандидат прибыл;\n - должным образом сертифицированная копия свидетельства о рождении;\n - должным образом сертифицированная копия паспорта;\n - 4 фото 3х4 см;\n - 2 фотографии 2x3 см.\n Все документы должны иметь нотариоцированный перевод на один из государственных языков Республики Беларусь (беларусский или русский). \n\nСтепень магистра:\n- Оригинал диплома высшего образования с заявлением, выпущенным в Республике Беларусь, или документ по образованию, выпущенному в иностранном государстве, который указывает на изученные дисциплины и их объем, полученные на них знаки (баллы);\n - Заключение Комиссии по медицинской консультации, выпущенной Организацией территориальной здравоохранения Республики Беларусь;\n - Медицинский отчет о состоянии здоровья и свидетельство о отсутствии ВИЧ -инфекции, выпущенное официальным управлением здравоохранения страны, из которого кандидат прибыл;\n - должным образом сертифицированная копия свидетельства о рождении\n - 4 фото 3х4 см;\n - 2 фотографии 2x3 см.\n Все документы должны иметь нотариоцированный перевод на один из государственных языков Республики Беларусь (белорусская или русская)")
     elif query.data == 'registration_ru':
-        query.edit_message_text(text="Upon arrival in the Republic of Belarus, a foreign citizen must apply to the Department for international cooperations to sign a study agreement and register a temporary stay. You can also register a temporary stay on your own on the Unified Portal of E-services portal.gov.by (registration is free): procedure 200.12.14.1 'Registration of a foreign citizen or stateless person temporarily staying in the Republic of Belarus'.\n For registration of temporary residence (for up to 1 year), a foreign citizen must provide the following documents to the Department for international cooperation:\n 1. Passport;\n 2. Notarized passport translation into Russian;\n 3. A copy of the previous temporary residence permit or a copy of the visa (for new arrivals);\n 4. Insurance policy;\n 5. Study agreement;\n 6. Rental agreement for a flat or dormitory;\n 7. Application form (the form is issued by a department employee);\n 8. Payment receipt (banking details are issued by a department officer).")
+        query.edit_message_text(text="По прибытии в Республику Беларусь иностранный гражданин должен обратиться в Департамент по международным кооперациям, чтобы подписать соглашение об обучении и зарегистрировать временное пребывание.Вы также можете зарегистрировать временное пребывание самостоятельно на Unified Portal of E-услуги Portal.gov.by (регистрация бесплатна): Процедура 200.12.14.1 'Регистрация иностранного гражданина или без гражданства, временно оставшегося в Республике Беларусь.\n Для регистрации временного проживания (на срок до 1 года) иностранный гражданин должен предоставить следующие документы Департаменту для международного сотрудничества:\n 1. Заграничный пасспорт;\n 2. Нотаризированный перевод паспорта на русский;\n 3. Копия предыдущего разрешения на проживание или копия визы (для вновь прибывших);\n 4. Страховой полис;\n 5. Учебное соглашение;\n 6. Соглашение об аренде для квартиры или общежития;\n 7. Форма заявления (форма выдается сотрудником департамента);\n 8. Квитанция о оплате (банковские данные выдаются сотрудником департамента).")
 
 
 

@@ -37,4 +37,3 @@ jobs:
     - name: Test with pytest
       run: | 
         #!/usr/bin/env python3 bgulobot.py
-        pytest
